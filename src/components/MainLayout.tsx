@@ -17,7 +17,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {children}
       </Content>
       <Footer className={styles.footer}>
-        © 2023 LLM Util. All rights reserved.
+        © 2024 LLM Util. All rights reserved.
       </Footer>
     </Layout>
   );
