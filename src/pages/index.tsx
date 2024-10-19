@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import MainLayout from '@/components/MainLayout';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 const { Title, Paragraph } = Typography;
 
 export default function Home() {
