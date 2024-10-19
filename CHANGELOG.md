@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/sapieonic/llm-util-ui/compare/v1.0.1...v1.0.2) (2024-10-19)
+
+
+### Bug Fixes
+
+* Logo and footer updates ([#86](https://github.com/sapieonic/llm-util-ui/issues/86)cwuywm1) ([ffc46b6](https://github.com/sapieonic/llm-util-ui/commit/ffc46b6b684be3dd466ff364290e2bbb0d7c3a6a)), closes [#86cwuywm1](https://github.com/sapieonic/llm-util-ui/issues/86cwuywm1)
+
 ## [1.0.1](https://github.com/sapieonic/llm-util-ui/compare/v1.0.0...v1.0.1) (2024-10-19)
 
 
