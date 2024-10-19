@@ -26,7 +26,7 @@ jobs:
 
       - name: Debug Git access
         run: |
-          git ls-remote --heads https://github.com/sapieonic/llm-util.git
+          git ls-remote --heads https://github.com/sapieonic/llm-util-ui.git
         env:
           GIT_TERMINAL_PROMPT: 0
 
