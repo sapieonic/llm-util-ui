@@ -1,0 +1,113 @@
+.layout {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f9fc, #e9f1f7);
+}
+
+.header {
+    background: #ffffff;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: #1890ff;
+    margin: 0;
+}
+
+.content {
+    padding: 50px;
+}
+
+.heroSection {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.mainTitle {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    animation: slideUp 0.8s ease-out;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #34495e;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    animation: slideUp 1s ease-out;
+}
+
+.ctaButton {
+    font-size: 1.1rem;
+    height: auto;
+    padding: 10px 30px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.featuresSection {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.featureCards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.featureCard {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 250px;
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+}
+
+.featureCard h3 {
+    color: #1890ff;
+    margin-bottom: 15px;
+}
+
+.footer {
+    text-align: center;
+    background: #001529;
+    color: #fff;
+    padding: 20px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

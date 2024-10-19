@@ -1,0 +1,14 @@
+.layout {
+    min-height: 100vh;
+}
+
+.content {
+    padding: 24px;
+    background: #f0f2f5;
+}
+
+.footer {
+    text-align: center;
+    background: #001529;
+    color: #fff;
+}

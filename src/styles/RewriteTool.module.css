@@ -1,0 +1,26 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.textarea {
+    margin-bottom: 16px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.spinner {
+    display: block;
+    margin: 20px auto;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #f0f2f5;
+    border-radius: 4px;
+}
