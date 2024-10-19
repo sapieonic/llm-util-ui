@@ -24,3 +24,45 @@
     background-color: #f0f2f5;
     border-radius: 4px;
 }
+
+.formattedResult {
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.formattedResult p {
+    margin-bottom: 1em;
+}
+
+.formattedResult ul,
+.formattedResult ol {
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.formattedResult li {
+    margin-bottom: 0.5em;
+}
+
+.formattedResult h1,
+.formattedResult h2,
+.formattedResult h3,
+.formattedResult h4,
+.formattedResult h5,
+.formattedResult h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.formattedResult code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+.formattedResult pre {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+}
