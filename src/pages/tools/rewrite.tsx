@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Input, Button, Spin, message } from 'antd';
+import ReactMarkdown from 'react-markdown';
 import ToolLayout from '../../components/ToolLayout';
 import styles from '../../styles/RewriteTool.module.css';
 
@@ -71,7 +72,9 @@ const RewriteTool: React.FC = () => {
         {result && (
           <div className={styles.result}>
             <h2>Rewritten Text:</h2>
-            <p>{result}</p>
+            <div className={styles.formattedResult}>
+              <ReactMarkdown>{result}</ReactMarkdown>
+            </div>
           </div>
         )}
       </div>
