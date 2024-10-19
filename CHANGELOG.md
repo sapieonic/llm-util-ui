@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/sapieonic/llm-util-ui/compare/v1.0.2...v1.1.0) (2024-10-19)
+
+
+### Features
+
+* Adds markdown support and title to the website ([#86](https://github.com/sapieonic/llm-util-ui/issues/86)cwuzh4e) ([89fec51](https://github.com/sapieonic/llm-util-ui/commit/89fec51d9f2c4bebcd2b283a21c126683afb0108)), closes [#86cwuzh4](https://github.com/sapieonic/llm-util-ui/issues/86cwuzh4)
+
 ## [1.0.2](https://github.com/sapieonic/llm-util-ui/compare/v1.0.1...v1.0.2) (2024-10-19)
 
 
