@@ -1,14 +1,14 @@
 import "../styles/globals.css";
 
 export default function RootLayout({
-  children,
+  item,
 }: Readonly<{
-  children: React.ReactNode;
+  item: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body>
-        {children}
+        {item}
       </body>
     </html>
   );

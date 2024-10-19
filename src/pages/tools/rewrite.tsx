@@ -34,7 +34,8 @@ const RewriteTool: React.FC = () => {
         throw new Error('API request failed');
       }
 
-      const data = await response.json();
+      const result = await response.json();
+      const { data } = result;
       setResult(data.result);
     } catch (error) {
       console.error('Error:', error);
