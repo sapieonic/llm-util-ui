@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT }}
+          persist-credentials: false
+
+      - name: Set up Git credentials
+        run: |
+          git config --global url."https://api:${PAT}@github.com/".insteadOf "https://github.com/"
+          git config --global url."https://ssh:${PAT}@github.com/".insteadOf "ssh://git@github.com/"
+          git config --global url."https://git:${PAT}@github.com/".insteadOf "git@github.com:"
+        env:
+          PAT: ${{ secrets.PAT }}
+
+      - name: Debug Git access
+        run: |
+          git ls-remote --heads https://github.com/sapieonic/llm-util-ui.git
+        env:
+          GIT_TERMINAL_PROMPT: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
