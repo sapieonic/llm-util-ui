@@ -5,7 +5,7 @@ import styles from '../styles/Catalogue.module.css';
 import { FileTextOutlined, SisternodeOutlined, TranslationOutlined } from '@ant-design/icons';
 import MainLayout from '@/components/MainLayout';
 
-const features = [
+export const features = [
   {
     title: 'Text Rewriting',
     description: 'Transform your content with AI-powered rewriting tools.',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Button, Spin, message } from 'antd';
 import ReactMarkdown from 'react-markdown';
+import { CopyOutlined } from '@ant-design/icons';
 import ToolLayout from '../../components/ToolLayout';
 import styles from '../../styles/RewriteTool.module.css';
 
@@ -51,6 +52,14 @@ const RewriteTool: React.FC = () => {
     setResult('');
   };
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(result).then(() => {
+      message.success('Content copied to clipboard');
+    }).catch(() => {
+      message.error('Failed to copy content');
+    });
+  };
+
   return (
     <ToolLayout>
       <div className={styles.container}>
@@ -71,7 +80,16 @@ const RewriteTool: React.FC = () => {
         {loading && <Spin size="large" className={styles.spinner} />}
         {result && (
           <div className={styles.result}>
-            <h2>Rewritten Text:</h2>
+            <div className={styles.resultHeader}>
+              <h2>Rewritten Text:</h2>
+              <Button 
+                icon={<CopyOutlined />} 
+                onClick={handleCopy}
+                className={styles.copyButton}
+              >
+                Copy
+              </Button>
+            </div>
             <div className={styles.formattedResult}>
               <ReactMarkdown>{result}</ReactMarkdown>
             </div>

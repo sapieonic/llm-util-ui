@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import MainLayout from '@/components/MainLayout';
-
+import FeatureCard from '@/components/FeatureCard';
+import { features } from './catalogue';
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
 
@@ -25,18 +26,15 @@ export default function Home() {
           <div className={styles.featuresSection}>
             <Title level={2}>Our Services</Title>
             <div className={styles.featureCards}>
-              <div className={styles.featureCard}>
-                <h3>Text Rewriting</h3>
-                <p>Transform your content with AI-powered rewriting tools.</p>
-              </div>
-              <div className={styles.featureCard}>
-                <h3>Summarization</h3>
-                <p>Condense lengthy texts into concise, informative summaries.</p>
-              </div>
-              <div className={styles.featureCard}>
-                <h3>Language Translation</h3>
-                <p>Break language barriers with accurate translations.</p>
-              </div>
+              {features.map((feature, index) => (
+                <Link href={feature.link} key={index} passHref>
+                  <FeatureCard
+                    title={feature.title}
+                    description={feature.description}
+                    icon={feature.icon}
+                  />
+                </Link>
+              ))}
             </div>
           </div>
         </Content>
