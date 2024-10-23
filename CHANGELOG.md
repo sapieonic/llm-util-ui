@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/sapieonic/llm-util-ui/compare/v1.1.0...v1.2.0) (2024-10-23)
+
+
+### Features
+
+* Adds copy button to the generated content ([#86](https://github.com/sapieonic/llm-util-ui/issues/86)cwuzh4e) ([b02c307](https://github.com/sapieonic/llm-util-ui/commit/b02c307181520bc0555c294542c8d9948012c2c6)), closes [#86cwuzh4](https://github.com/sapieonic/llm-util-ui/issues/86cwuzh4)
+
 # [1.1.0](https://github.com/sapieonic/llm-util-ui/compare/v1.0.2...v1.1.0) (2024-10-19)
 
 
