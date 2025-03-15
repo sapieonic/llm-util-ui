@@ -11,13 +11,22 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <Layout className={styles.layout}>
+    <Layout className={styles.mainLayout}>
       <Header />
       <Content className={styles.content}>
         {children}
       </Content>
       <Footer className={styles.footer}>
-        © 2024 LLM Util. All rights reserved.
+        <div className={styles.footerContent}>
+          <div className={styles.footerLinks}>
+            <a href="/about" className={styles.footerLink}>About</a>
+            <a href="/catalogue" className={styles.footerLink}>Services</a>
+            <a href="https://manasranjan.dev" className={styles.footerLink} target="_blank" rel="noopener noreferrer">Contact</a>
+          </div>
+          <div>
+            LLM Util © {new Date().getFullYear()} - AI-powered text utilities
+          </div>
+        </div>
       </Footer>
     </Layout>
   );

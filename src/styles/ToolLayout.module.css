@@ -2,21 +2,58 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background: var(--background);
 }
 
 .contentLayout {
     display: flex;
     flex: 1;
+    margin-top: 70px; /* To account for the fixed header */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(58, 134, 255, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 30%);
 }
 
 .sider {
-    background: #fff;
-    border-right: 1px solid #f0f0f0;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 20px;
+    border-radius: 0 16px 16px 0;
+    overflow: hidden;
+}
+
+.sider :global(.ant-menu) {
+    background: transparent;
+}
+
+.sider :global(.ant-menu-item) {
+    color: var(--foreground-muted);
+    border-radius: 0;
+    margin: 0;
+}
+
+.sider :global(.ant-menu-item:hover) {
+    color: var(--foreground);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sider :global(.ant-menu-item-selected) {
+    background: rgba(58, 134, 255, 0.2) !important;
+    color: var(--foreground);
+}
+
+.sider :global(.ant-menu-item-selected::after) {
+    border-right: 3px solid var(--primary) !important;
+}
+
+.sider :global(.ant-menu-item-active) {
+    color: var(--foreground);
 }
 
 .content {
-    background: #fff;
-    padding: 24px;
+    background: transparent;
+    padding: 30px;
     margin: 0;
     min-height: 280px;
     flex: 1;

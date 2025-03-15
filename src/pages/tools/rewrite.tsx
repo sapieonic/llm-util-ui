@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Button, Spin, message } from 'antd';
 import ReactMarkdown from 'react-markdown';
-import { CopyOutlined } from '@ant-design/icons';
+import { CopyOutlined, ReloadOutlined } from '@ant-design/icons';
 import ToolLayout from '../../components/ToolLayout';
 import styles from '../../styles/RewriteTool.module.css';
 
@@ -20,6 +20,13 @@ const RewriteTool: React.FC = () => {
 
     setLoading(true);
     try {
+      // Simulate API call for demo purposes
+      // setTimeout(() => {
+      //   setResult(`# Rewritten Content\n\nHere is your rewritten content with improved clarity and style:\n\n${content}\n\n## Additional Suggestions\n\n- Consider using more varied vocabulary\n- Structure your paragraphs for better flow\n- Use active voice when possible`);
+      //   setLoading(false);
+      // }, 2000);
+
+      // Uncomment for real API integration
       const response = await fetch('https://api.llm-util.com/api/v1/util', {
         method: 'POST',
         headers: {
@@ -75,15 +82,17 @@ const RewriteTool: React.FC = () => {
           <Button type="primary" onClick={handleRewrite} disabled={loading}>
             Rewrite
           </Button>
-          <Button onClick={handleReset}>Reset</Button>
+          <Button onClick={handleReset} icon={<ReloadOutlined />}>
+            Reset
+          </Button>
         </div>
         {loading && <Spin size="large" className={styles.spinner} />}
         {result && (
           <div className={styles.result}>
             <div className={styles.resultHeader}>
-              <h2>Rewritten Text:</h2>
-              <Button 
-                icon={<CopyOutlined />} 
+              <h2>Rewritten Text</h2>
+              <Button
+                icon={<CopyOutlined />}
                 onClick={handleCopy}
                 className={styles.copyButton}
               >

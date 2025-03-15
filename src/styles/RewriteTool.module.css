@@ -1,50 +1,135 @@
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    color: var(--foreground);
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #78b4ff, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 700;
 }
 
 .textarea {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    border-radius: 12px !important;
+    background: rgba(30, 41, 59, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--foreground) !important;
+    font-size: 1rem !important;
+    padding: 16px !important;
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2) !important;
+}
+
+.textarea::placeholder {
+    color: var(--foreground-muted);
 }
 
 .buttonGroup {
     display: flex;
     gap: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.buttonGroup button {
+    border-radius: 8px;
+    height: 44px;
+    font-weight: 500;
+    padding: 0 24px;
+    transition: all 0.3s ease;
+}
+
+.buttonGroup button[type="primary"] {
+    background: var(--gradient-1);
+    border: none;
+    box-shadow: var(--shadow-md);
+}
+
+.buttonGroup button[type="primary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), 0 0 15px rgba(58, 134, 255, 0.5);
+}
+
+.buttonGroup button:not([type="primary"]) {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+}
+
+.buttonGroup button:not([type="primary"]):hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .spinner {
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
+    color: var(--primary) !important;
 }
 
 .result {
-    margin-top: 20px;
-    padding: 16px;
-    background-color: #f0f2f5;
-    border-radius: 4px;
+    margin-top: 30px;
+    padding: 24px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    animation: fadeIn 0.5s ease-out;
 }
 
 .formattedResult {
     position: relative;
     font-family: inherit;
     line-height: 1.6;
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
-    padding: 16px;
-    background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.6);
+    color: var(--foreground);
+    overflow: auto;
+    max-height: 500px;
 }
 
 .resultHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.resultHeader h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--foreground);
 }
 
 .copyButton {
     display: flex;
     align-items: center;
+    background: rgba(58, 134, 255, 0.2);
+    border: none;
+    color: var(--foreground);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.copyButton:hover {
+    background: rgba(58, 134, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 .formattedResult ul,
@@ -65,17 +150,31 @@
 .formattedResult h6 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    color: var(--foreground);
 }
 
 .formattedResult code {
-    background-color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.1);
     padding: 0.2em 0.4em;
     border-radius: 3px;
+    font-family: 'Fira Code', monospace;
 }
 
 .formattedResult pre {
-    background-color: #f0f0f0;
+    background: rgba(15, 23, 42, 0.8);
     padding: 1em;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

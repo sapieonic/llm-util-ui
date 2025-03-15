@@ -16,11 +16,12 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ children }) => {
     <Layout className={styles.layout}>
       <Header />
       <Layout className={styles.contentLayout}>
-        <Sider width={200} className={styles.sider}>
+        <Sider width={220} className={styles.sider} theme="dark">
           <Menu
             mode="inline"
             defaultSelectedKeys={['1']}
             className={styles.menu}
+            theme="dark"
           >
             <Menu.Item key="1" icon={<FileTextOutlined />}>
               <Link href="/tools/rewrite">Rewrite Text</Link>
