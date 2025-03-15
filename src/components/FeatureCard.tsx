@@ -10,7 +10,7 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon }) => {
   return (
-    <Card className={styles.card} hoverable>
+    <Card className={styles.card} bordered={false}>
       {icon && <div className={styles.icon}>{icon}</div>}
       <Card.Meta title={title} description={description} />
     </Card>

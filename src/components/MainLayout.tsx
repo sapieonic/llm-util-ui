@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
+import Link from 'next/link';
 import Header from './Header';
 import styles from '../styles/MainLayout.module.css';
 
@@ -11,13 +12,22 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <Layout className={styles.layout}>
+    <Layout className={styles.mainLayout}>
       <Header />
       <Content className={styles.content}>
         {children}
       </Content>
       <Footer className={styles.footer}>
-        © 2024 LLM Util. All rights reserved.
+        <div className={styles.footerContent}>
+          <div className={styles.footerLinks}>
+            <Link href="/about" className={styles.footerLink}>About</Link>
+            <Link href="/catalogue" className={styles.footerLink}>Services</Link>
+            <a href="https://manasranjan.dev" className={styles.footerLink} target="_blank" rel="noopener noreferrer">Contact</a>
+          </div>
+          <div>
+            LLM Util © {new Date().getFullYear()} - AI-powered text utilities
+          </div>
+        </div>
       </Footer>
     </Layout>
   );

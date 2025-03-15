@@ -14,8 +14,15 @@ export default function Home() {
       <Layout className={styles.layoutWrapper}>
         <Content className={styles.content}>
           <div className={styles.heroSection}>
-            <Image src="/logo.jpeg" alt="Logo" width={150} height={150} className={styles.logo} />
-            <Title level={1} className={styles.mainTitle}>Welcome to LLM Util</Title>
+            <Image 
+              src="/logo.jpeg" 
+              alt="Logo" 
+              width={180} 
+              height={180} 
+              className={styles.logo} 
+              priority
+            />
+            <Title level={1} className={styles.mainTitle} data-text="Welcome to LLM Util">Welcome to LLM Util</Title>
             <Paragraph className={styles.subtitle}>
               Harness the power of AI for text rewriting, summarization, and more.
             </Paragraph>

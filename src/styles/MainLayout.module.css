@@ -1,14 +1,42 @@
-.layout {
+.mainLayout {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
 }
 
 .content {
-    padding: 24px;
-    background: #f0f2f5;
+    flex: 1;
+    padding-top: 70px; /* To account for the fixed header */
 }
 
 .footer {
     text-align: center;
-    background: #001529;
-    color: #fff;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    color: var(--foreground-muted);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footerLink {
+    color: var(--foreground-muted);
+    transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+    color: var(--foreground);
 }

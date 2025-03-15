@@ -1,17 +1,71 @@
 .header {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(10px);
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-.title {
-    color: #1890ff;
-    margin: 0;
+.header:hover {
+    background: rgba(15, 23, 42, 0.9) !important;
 }
 
 .logoLink {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin: 0 !important;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    color: var(--foreground-muted);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+.navLink:hover {
+    color: var(--foreground);
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-1);
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
 }
