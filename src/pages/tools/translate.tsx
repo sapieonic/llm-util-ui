@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, Button, Select } from 'antd';
+import { Input, Button, Select, message } from 'antd';
 import { ReloadOutlined } from '@ant-design/icons';
 import ToolContainer from '../../components/ToolContainer';
 import useTool from '../../hooks/useTool';
@@ -84,8 +84,6 @@ const TranslateTool: React.FC = () => {
       setSourceLanguage(targetLanguage);
       setTargetLanguage(temp);
     } else {
-      // Use message from antd directly
-      const { message } = require('antd');
       message.info('Cannot swap when source language is set to "Auto Detect"');
     }
   };
