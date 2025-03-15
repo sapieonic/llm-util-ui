@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/sapieonic/llm-util-ui/compare/v1.3.0...v1.4.0) (2025-03-15)
+
+
+### Features
+
+* Refactored code ([a7b5e86](https://github.com/sapieonic/llm-util-ui/commit/a7b5e8661c0fa523edfdadabbbaa6b7128545862))
+
 # [1.3.0](https://github.com/sapieonic/llm-util-ui/compare/v1.2.0...v1.3.0) (2025-03-15)
 
 
