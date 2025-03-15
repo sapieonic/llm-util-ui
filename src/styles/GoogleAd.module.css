@@ -1,0 +1,52 @@
+.adContainer {
+  width: 100%;
+  margin: 20px 0;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.adContainerSidebar {
+  width: 100%;
+  margin: 10px 0;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.adContainerRectangle {
+  width: 100%;
+  margin: 20px 0;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.adLabel {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 10px;
+  color: var(--foreground-muted);
+  opacity: 0.7;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .adContainerSidebar {
+    min-height: 100px;
+  }
+} 

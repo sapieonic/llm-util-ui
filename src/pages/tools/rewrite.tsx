@@ -3,7 +3,10 @@ import { Input, Button, Spin, message } from 'antd';
 import ReactMarkdown from 'react-markdown';
 import { CopyOutlined, ReloadOutlined } from '@ant-design/icons';
 import ToolLayout from '../../components/ToolLayout';
+import GoogleAd from '../../components/GoogleAd';
 import styles from '../../styles/RewriteTool.module.css';
+import adStyles from '../../styles/GoogleAd.module.css';
+import { ADSENSE_CONFIG } from '../../config/adsense';
 
 const { TextArea } = Input;
 
@@ -87,6 +90,17 @@ const RewriteTool: React.FC = () => {
           </Button>
         </div>
         {loading && <Spin size="large" className={styles.spinner} />}
+        
+        {/* In-content Ad Container */}
+        <div className={adStyles.adContainer}>
+          <span className={adStyles.adLabel}>Advertisement</span>
+          <GoogleAd
+            slot={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.SLOT}
+            format={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.FORMAT}
+            responsive={true}
+          />
+        </div>
+        
         {result && (
           <div className={styles.result}>
             <div className={styles.resultHeader}>
