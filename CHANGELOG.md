@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/sapieonic/llm-util-ui/compare/v1.2.0...v1.3.0) (2025-03-15)
+
+
+### Bug Fixes
+
+* Removed advertisement text from the UI ([ed264a5](https://github.com/sapieonic/llm-util-ui/commit/ed264a5d16ce4d1e1e203b5c8c6b9b8fb6b568d6))
+
+
+### Features
+
+* Adds new tools support ([73f9672](https://github.com/sapieonic/llm-util-ui/commit/73f9672856bc1a97eacfcf97aec2fda757aaa9ae))
+
 # [1.2.0](https://github.com/sapieonic/llm-util-ui/compare/v1.1.0...v1.2.0) (2024-10-23)
 
 
