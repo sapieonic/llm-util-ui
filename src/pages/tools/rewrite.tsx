@@ -93,7 +93,6 @@ const RewriteTool: React.FC = () => {
         
         {/* In-content Ad Container */}
         <div className={adStyles.adContainer}>
-          <span className={adStyles.adLabel}>Advertisement</span>
           <GoogleAd
             slot={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.SLOT}
             format={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.FORMAT}

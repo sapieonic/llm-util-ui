@@ -39,7 +39,6 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ children }) => {
           
           {/* Sidebar Ad Container */}
           <div className={adStyles.adContainerSidebar}>
-            <span className={adStyles.adLabel}>Advertisement</span>
             <GoogleAd
               slot={ADSENSE_CONFIG.AD_UNITS.VERTICAL_BANNER.SLOT}
               format={ADSENSE_CONFIG.AD_UNITS.VERTICAL_BANNER.FORMAT}
@@ -51,7 +50,6 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ children }) => {
         <Content className={styles.content}>
           {/* Top Ad Container */}
           <div className={adStyles.adContainer}>
-            <span className={adStyles.adLabel}>Advertisement</span>
             <GoogleAd
               slot={ADSENSE_CONFIG.AD_UNITS.HORIZONTAL_BANNER.SLOT}
               format={ADSENSE_CONFIG.AD_UNITS.HORIZONTAL_BANNER.FORMAT}
@@ -66,7 +64,6 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ children }) => {
           
           {/* Bottom Ad Container */}
           <div className={adStyles.adContainerRectangle}>
-            <span className={adStyles.adLabel}>Advertisement</span>
             <GoogleAd
               slot={ADSENSE_CONFIG.AD_UNITS.RECTANGLE.SLOT}
               format={ADSENSE_CONFIG.AD_UNITS.RECTANGLE.FORMAT}

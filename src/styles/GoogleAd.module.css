@@ -35,15 +35,6 @@
   overflow: hidden;
 }
 
-.adLabel {
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  font-size: 10px;
-  color: var(--foreground-muted);
-  opacity: 0.7;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .adContainerSidebar {
