@@ -1,0 +1,234 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--foreground);
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #78b4ff, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.textarea {
+    margin-bottom: 20px;
+    border-radius: 12px !important;
+    background: rgba(30, 41, 59, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--foreground) !important;
+    font-size: 1rem !important;
+    padding: 16px !important;
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2) !important;
+}
+
+.textarea::placeholder {
+    color: var(--foreground-muted);
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: rgba(30, 41, 59, 0.5);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sliderContainer span {
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+.sliderContainer span:first-child {
+    margin-right: 16px;
+    min-width: 140px;
+}
+
+.sliderContainer span:last-child {
+    margin-left: 16px;
+    min-width: 40px;
+    text-align: right;
+}
+
+.slider {
+    flex: 1;
+}
+
+.slider :global(.ant-slider-rail) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slider :global(.ant-slider-track) {
+    background-color: var(--primary);
+}
+
+.slider :global(.ant-slider-handle) {
+    border-color: var(--primary);
+}
+
+.slider :global(.ant-slider-handle):focus {
+    box-shadow: 0 0 0 5px rgba(58, 134, 255, 0.2);
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.buttonGroup button {
+    border-radius: 8px;
+    height: 44px;
+    font-weight: 500;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buttonGroup button[type="primary"] {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.buttonGroup button[type="primary"]:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.buttonGroup button:not([type="primary"]) {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+}
+
+.buttonGroup button:not([type="primary"]):hover {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.result {
+    margin-top: 30px;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.formattedResult {
+    margin-top: 16px;
+    color: var(--foreground);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.formattedResult p {
+    margin-bottom: 16px;
+}
+
+.resultHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resultHeader h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.copyButton {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+    border-radius: 8px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyButton:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.formattedResult ul,
+.formattedResult ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.formattedResult li {
+    margin-bottom: 8px;
+}
+
+.formattedResult h1,
+.formattedResult h2,
+.formattedResult h3,
+.formattedResult h4,
+.formattedResult h5,
+.formattedResult h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.formattedResult code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.formattedResult pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

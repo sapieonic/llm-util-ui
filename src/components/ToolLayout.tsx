@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FileTextOutlined, SisternodeOutlined, TranslationOutlined } from '@ant-design/icons';
 import styles from '../styles/ToolLayout.module.css';
 import adStyles from '../styles/GoogleAd.module.css';
@@ -15,6 +16,17 @@ interface ToolLayoutProps {
 }
 
 const ToolLayout: React.FC<ToolLayoutProps> = ({ children }) => {
+  const router = useRouter();
+  
+  // Determine which menu item should be selected based on the current path
+  const getSelectedKey = () => {
+    const path = router.pathname;
+    if (path.includes('/tools/rewrite')) return '1';
+    if (path.includes('/tools/summarize')) return '2';
+    if (path.includes('/tools/translate')) return '3';
+    return '1'; // Default to rewrite if path doesn't match
+  };
+
   return (
     <Layout className={styles.layout}>
       <Header />
@@ -22,7 +34,7 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ children }) => {
         <Sider width={220} className={styles.sider} theme="dark">
           <Menu
             mode="inline"
-            defaultSelectedKeys={['1']}
+            selectedKeys={[getSelectedKey()]}
             className={styles.menu}
             theme="dark"
           >

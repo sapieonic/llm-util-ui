@@ -1,0 +1,273 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--foreground);
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #78b4ff, #f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.languageSelectors {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: rgba(30, 41, 59, 0.5);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.languageSelector {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.languageSelector label {
+    color: var(--foreground);
+    font-weight: 500;
+    margin-right: 12px;
+    min-width: 50px;
+}
+
+.select {
+    flex: 1;
+    border-radius: 8px !important;
+    background: rgba(30, 41, 59, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--foreground) !important;
+}
+
+.select :global(.ant-select-selector) {
+    background: transparent !important;
+    border: none !important;
+    color: var(--foreground) !important;
+}
+
+.select :global(.ant-select-arrow) {
+    color: var(--foreground-muted) !important;
+}
+
+.dropdown {
+    background: rgba(30, 41, 59, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+.dropdown :global(.ant-select-item) {
+    color: var(--foreground) !important;
+}
+
+.dropdown :global(.ant-select-item-option-selected) {
+    background-color: rgba(58, 134, 255, 0.2) !important;
+}
+
+.dropdown :global(.ant-select-item-option-active) {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.swapButton {
+    margin: 0 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(58, 134, 255, 0.2) !important;
+    border: 1px solid rgba(58, 134, 255, 0.3) !important;
+    color: var(--primary) !important;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.swapButton:hover {
+    background: rgba(58, 134, 255, 0.3) !important;
+    transform: rotate(180deg);
+}
+
+.swapIcon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.textarea {
+    margin-bottom: 20px;
+    border-radius: 12px !important;
+    background: rgba(30, 41, 59, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--foreground) !important;
+    font-size: 1rem !important;
+    padding: 16px !important;
+    transition: all 0.3s ease;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2) !important;
+}
+
+.textarea::placeholder {
+    color: var(--foreground-muted);
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.buttonGroup button {
+    border-radius: 8px;
+    height: 44px;
+    font-weight: 500;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buttonGroup button[type="primary"] {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.buttonGroup button[type="primary"]:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.buttonGroup button:not([type="primary"]) {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+}
+
+.buttonGroup button:not([type="primary"]):hover {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.result {
+    margin-top: 30px;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.formattedResult {
+    margin-top: 16px;
+    color: var(--foreground);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.formattedResult p {
+    margin-bottom: 16px;
+}
+
+.resultHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resultHeader h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.copyButton {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+    border-radius: 8px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyButton:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.formattedResult ul,
+.formattedResult ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.formattedResult li {
+    margin-bottom: 8px;
+}
+
+.formattedResult h1,
+.formattedResult h2,
+.formattedResult h3,
+.formattedResult h4,
+.formattedResult h5,
+.formattedResult h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.formattedResult code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.formattedResult pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
