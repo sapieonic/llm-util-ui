@@ -9,25 +9,25 @@ export const ADSENSE_CONFIG = {
   AD_UNITS: {
     // Horizontal banner (728x90)
     HORIZONTAL_BANNER: {
-      SLOT: 'XXXXXXXXXX',
+      SLOT: '1234567890',
       FORMAT: 'horizontal',
     },
     
     // Rectangle (300x250)
     RECTANGLE: {
-      SLOT: 'XXXXXXXXXX',
+      SLOT: '0987654321',
       FORMAT: 'rectangle',
     },
     
     // Vertical banner (160x600)
     VERTICAL_BANNER: {
-      SLOT: 'XXXXXXXXXX',
+      SLOT: '1357924680',
       FORMAT: 'vertical',
     },
     
     // In-article ad
     IN_ARTICLE: {
-      SLOT: 'XXXXXXXXXX',
+      SLOT: '2468013579',
       FORMAT: 'fluid',
     },
   },

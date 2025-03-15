@@ -21,10 +21,4 @@ declare module '*.jpg' {
 declare module '*.jpeg' {
   const content: string;
   export default content;
-}
-
-declare global {
-  interface Window {
-    adsbygoogle: any[];
-  }
 } 

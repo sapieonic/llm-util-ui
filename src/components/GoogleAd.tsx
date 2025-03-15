@@ -29,7 +29,9 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
 
     // Push the ad to Google for rendering
     try {
-      const adsbygoogle = window.adsbygoogle || [];
+      // Using type assertion to avoid TypeScript error
+      // The actual type is defined in src/types/adsense.d.ts
+      const adsbygoogle = (window as any).adsbygoogle || [];
       adsbygoogle.push({});
     } catch (error) {
       console.error('Error loading Google ad:', error);
@@ -54,11 +56,4 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
   );
 };
 
-export default GoogleAd;
-
-// Add this to global.d.ts or a similar type definition file
-declare global {
-  interface Window {
-    adsbygoogle: any[];
-  }
-} 
+export default GoogleAd; 
