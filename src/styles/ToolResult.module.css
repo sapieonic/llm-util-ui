@@ -1,0 +1,103 @@
+.result {
+    margin-top: 30px;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.resultHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resultHeader h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.copyButton {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+    border-radius: 8px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyButton:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.formattedResult {
+    margin-top: 16px;
+    color: var(--foreground);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.formattedResult p {
+    margin-bottom: 16px;
+}
+
+.formattedResult ul,
+.formattedResult ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.formattedResult li {
+    margin-bottom: 8px;
+}
+
+.formattedResult h1,
+.formattedResult h2,
+.formattedResult h3,
+.formattedResult h4,
+.formattedResult h5,
+.formattedResult h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.formattedResult code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.formattedResult pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
