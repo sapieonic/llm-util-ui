@@ -4,7 +4,7 @@ import ToolLayout from './ToolLayout';
 import GoogleAd from './GoogleAd';
 import adStyles from '../styles/GoogleAd.module.css';
 import containerStyles from '../styles/ToolContainer.module.css';
-import { ADSENSE_CONFIG } from '../config/adsense';
+import { ADSENSE_CONFIG, IS_ADS_ENABLED } from '../config/adsense';
 import ToolResult from './ToolResult';
 
 interface ToolContainerProps {
@@ -35,14 +35,16 @@ const ToolContainer: React.FC<ToolContainerProps> = ({
         
         {loading && <Spin size="large" className={containerStyles.spinner} />}
         
-        {/* In-content Ad Container */}
-        <div className={adStyles.adContainer}>
-          <GoogleAd
-            slot={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.SLOT}
-            format={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.FORMAT}
-            responsive={true}
-          />
-        </div>
+        {/* In-content Ad Container - Only rendered if ads are enabled */}
+        {IS_ADS_ENABLED && (
+          <div className={adStyles.adContainer}>
+            <GoogleAd
+              slot={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.SLOT}
+              format={ADSENSE_CONFIG.AD_UNITS.IN_ARTICLE.FORMAT}
+              responsive={true}
+            />
+          </div>
+        )}
         
         {result && (
           <ToolResult
@@ -56,4 +58,4 @@ const ToolContainer: React.FC<ToolContainerProps> = ({
   );
 };
 
-export default ToolContainer; 
+export default ToolContainer;

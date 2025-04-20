@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { message } from 'antd';
+import { useAuth } from '../contexts/AuthContext';
+import { useRouter } from 'next/router';
 
 interface UseToolOptions {
   action: string;
@@ -16,8 +18,20 @@ const useTool = ({ action, validateInput, resetState }: UseToolOptions) => {
   const [content, setContent] = useState('');
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
+  const { currentUser } = useAuth();
+  const router = useRouter();
 
   const handleAction = async (requestOptions?: ApiRequestOptions) => {
+    // Check if user is authenticated
+    if (!currentUser) {
+      message.error('Please sign in to use this tool');
+      router.push({
+        pathname: '/login',
+        query: { returnUrl: router.asPath },
+      });
+      return;
+    }
+
     const inputContent = requestOptions?.content || content;
     
     // Validate input if validation function is provided
@@ -34,16 +48,21 @@ const useTool = ({ action, validateInput, resetState }: UseToolOptions) => {
 
     setLoading(true);
     try {
+      // Get the user's ID token for authentication
+      const idToken = await currentUser.getIdToken();
+      
       const response = await fetch('https://api.llm-util.com/api/v1/util', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
+          'Authorization': `Bearer ${idToken}`,
         },
         body: JSON.stringify({
           action,
           content: inputContent,
           options: requestOptions?.options,
+          userId: currentUser.uid,
         }),
       });
 
@@ -89,4 +108,4 @@ const useTool = ({ action, validateInput, resetState }: UseToolOptions) => {
   };
 };
 
-export default useTool; 
+export default useTool;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Input, Button, Select, message } from 'antd';
 import { ReloadOutlined } from '@ant-design/icons';
 import ToolContainer from '../../components/ToolContainer';
+import ProtectedRoute from '../../components/ProtectedRoute';
 import useTool from '../../hooks/useTool';
 import styles from '../../styles/TranslateTool.module.css';
 
@@ -89,79 +90,81 @@ const TranslateTool: React.FC = () => {
   };
 
   return (
-    <ToolContainer
-      title="Translate Text"
-      loading={loading}
-      result={result}
-      resultTitle="Translation"
-      onCopy={handleCopy}
-      className={styles.container}
-    >
-      <div className={styles.languageSelectors}>
-        <div className={styles.languageSelector}>
-          <label>From:</label>
-          <Select
-            value={sourceLanguage}
-            onChange={setSourceLanguage}
-            className={styles.select}
-            dropdownClassName={styles.dropdown}
-          >
-            <Option value="auto">Auto Detect</Option>
-            {languages.map(lang => (
-              <Option key={lang.name} value={lang.name}>{lang.name}</Option>
-            ))}
-          </Select>
+    <ProtectedRoute>
+      <ToolContainer
+        title="Translate Text"
+        loading={loading}
+        result={result}
+        resultTitle="Translation"
+        onCopy={handleCopy}
+        className={styles.container}
+      >
+        <div className={styles.languageSelectors}>
+          <div className={styles.languageSelector}>
+            <label>From:</label>
+            <Select
+              value={sourceLanguage}
+              onChange={setSourceLanguage}
+              className={styles.select}
+              dropdownClassName={styles.dropdown}
+            >
+              <Option value="auto">Auto Detect</Option>
+              {languages.map(lang => (
+                <Option key={lang.name} value={lang.name}>{lang.name}</Option>
+              ))}
+            </Select>
+          </div>
+          
+          <Button 
+            className={styles.swapButton} 
+            onClick={handleSwapLanguages}
+            icon={<span className={styles.swapIcon}>⇄</span>}
+          />
+          
+          <div className={styles.languageSelector}>
+            <label>To:</label>
+            <Select
+              value={targetLanguage}
+              onChange={setTargetLanguage}
+              className={styles.select}
+              dropdownClassName={styles.dropdown}
+            >
+              {languages.map(lang => (
+                <Option key={lang.name} value={lang.name}>{lang.name}</Option>
+              ))}
+            </Select>
+          </div>
         </div>
         
-        <Button 
-          className={styles.swapButton} 
-          onClick={handleSwapLanguages}
-          icon={<span className={styles.swapIcon}>⇄</span>}
+        <TextArea
+          rows={6}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Enter text to translate..."
+          className={styles.textarea}
         />
         
-        <div className={styles.languageSelector}>
-          <label>To:</label>
-          <Select
-            value={targetLanguage}
-            onChange={setTargetLanguage}
-            className={styles.select}
-            dropdownClassName={styles.dropdown}
+        <div className={styles.buttonGroup}>
+          <Button 
+            type="primary" 
+            onClick={() => handleTranslate({ 
+              content, 
+              options: { 
+                sourceLanguage, 
+                targetLanguage 
+              } 
+            })} 
+            disabled={loading}
           >
-            {languages.map(lang => (
-              <Option key={lang.name} value={lang.name}>{lang.name}</Option>
-            ))}
-          </Select>
+            Translate
+          </Button>
+          <Button onClick={handleReset} icon={<ReloadOutlined />}>
+            Reset
+          </Button>
         </div>
-      </div>
-      
-      <TextArea
-        rows={6}
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder="Enter text to translate..."
-        className={styles.textarea}
-      />
-      
-      <div className={styles.buttonGroup}>
-        <Button 
-          type="primary" 
-          onClick={() => handleTranslate({ 
-            content, 
-            options: { 
-              sourceLanguage, 
-              targetLanguage 
-            } 
-          })} 
-          disabled={loading}
-        >
-          Translate
-        </Button>
-        <Button onClick={handleReset} icon={<ReloadOutlined />}>
-          Reset
-        </Button>
-      </div>
-    </ToolContainer>
+      </ToolContainer>
+    </ProtectedRoute>
   );
 };
 
-export default TranslateTool; 
+export default TranslateTool;

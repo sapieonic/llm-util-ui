@@ -12,7 +12,7 @@
 
 .footer {
     text-align: center;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(35, 45, 65, 0.8);
     backdrop-filter: blur(10px);
     color: var(--foreground-muted);
     padding: 20px 0;
@@ -39,4 +39,33 @@
 
 .footerLink:hover {
     color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+    .footerLinks {
+        gap: 20px;
+    }
+    
+    .footerContent {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerLinks {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .footerLink {
+        padding: 5px 10px;
+    }
+    
+    .footer {
+        padding: 15px 0;
+    }
+    
+    .footerContent {
+        font-size: 0.9rem;
+    }
 }

@@ -100,4 +100,51 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media (max-width: 768px) {
+    .result {
+        padding: 20px;
+        margin-top: 24px;
+    }
+    
+    .resultHeader h2 {
+        font-size: 1.3rem;
+    }
+    
+    .formattedResult {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .result {
+        padding: 16px;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+    
+    .resultHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .resultHeader h2 {
+        font-size: 1.2rem;
+    }
+    
+    .copyButton {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .formattedResult {
+        font-size: 0.9rem;
+    }
+    
+    .formattedResult pre {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
 } 

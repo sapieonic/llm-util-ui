@@ -74,3 +74,46 @@
     font-size: 1rem !important;
     line-height: 1.6 !important;
 }
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        min-height: 220px;
+        padding: 25px !important;
+    }
+    
+    .icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .card :global(.ant-card-meta-title) {
+        font-size: 1.3rem !important;
+    }
+    
+    .card :global(.ant-card-meta-description) {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px !important;
+        min-height: 200px;
+    }
+    
+    .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+    
+    .card :global(.ant-card-meta-title) {
+        font-size: 1.2rem !important;
+    }
+}

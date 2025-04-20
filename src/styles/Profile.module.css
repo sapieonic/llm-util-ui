@@ -1,0 +1,40 @@
+.profileContainer {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profileCard {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.userDetails {
+  margin-left: 1.5rem;
+}
+
+.userDetails h3 {
+  margin-bottom: 0.25rem !important;
+}
+
+@media (max-width: 576px) {
+  .profileContainer {
+    padding: 1rem;
+  }
+  
+  .userInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .userDetails {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}

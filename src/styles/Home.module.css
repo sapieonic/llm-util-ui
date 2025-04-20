@@ -221,16 +221,65 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .mainTitle {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     
     .subtitle {
         font-size: 1.1rem;
+        padding: 0 15px;
     }
     
     .featureCards {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+    }
+    
+    .heroSection {
+        padding: 80px 15px 60px;
+    }
+    
+    .featuresSection {
+        padding: 60px 15px;
+    }
+    
+    .featuresSection h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .ctaButton {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    
+    .heroSection {
+        padding: 60px 10px 40px;
+    }
+    
+    .featuresSection {
+        padding: 40px 10px;
+    }
+    
+    .ctaButton {
+        width: 90%;
+        max-width: 250px;
     }
 }
 

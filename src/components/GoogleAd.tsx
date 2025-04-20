@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ADSENSE_CONFIG } from '../config/adsense';
+import { ADSENSE_CONFIG, IS_ADS_ENABLED } from '../config/adsense';
 
 interface GoogleAdProps {
   client?: string;
@@ -18,6 +18,10 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
   className = '',
   style = {},
 }) => {
+  // If ads are disabled, don't render anything
+  if (!IS_ADS_ENABLED) {
+    return null;
+  }
   useEffect(() => {
     // Add Google AdSense script if it doesn't exist
     const hasAdScript = document.querySelector('script[src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]');
@@ -56,4 +60,4 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
   );
 };
 
-export default GoogleAd; 
+export default GoogleAd;

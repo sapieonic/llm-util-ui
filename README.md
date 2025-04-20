@@ -20,6 +20,52 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Firebase Authentication Setup
+
+This project uses Firebase for authentication. Follow these steps to set up Firebase:
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+2. Enable Google Authentication in the Firebase Authentication section
+3. Register your app in the Firebase project settings
+4. Copy the Firebase configuration values
+5. Create a `.env.local` file in the root directory (you can copy from `.env.local.example`)
+6. Fill in your Firebase configuration values in the `.env.local` file
+
+Example `.env.local` file:
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+
+# Set to 'true' to enable ads, any other value or not set to disable ads
+NEXT_PUBLIC_ENABLE_ADS=true
+```
+
+## User Authentication and Token Tracking
+
+The application includes:
+- Google Sign-In authentication
+- Protected routes for tool access
+- User profile page with usage statistics
+- Token usage tracking per user
+
+## Ads Configuration
+
+The application includes Google AdSense integration that can be enabled or disabled via an environment variable:
+
+- Set `NEXT_PUBLIC_ENABLE_ADS=true` in your `.env.local` file to enable ads
+- Set `NEXT_PUBLIC_ENABLE_ADS=false` or remove the variable to disable ads
+
+When ads are disabled:
+- No AdSense script is loaded
+- No ad containers are rendered in the UI
+- The GoogleAd component doesn't render anything
+
+This feature allows for easy toggling between development/testing environments (ads off) and production environments (ads on).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

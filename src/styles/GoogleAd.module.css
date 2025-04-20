@@ -38,6 +38,28 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .adContainerSidebar {
-    min-height: 100px;
+    display: none; /* Hide sidebar ads on mobile */
+  }
+  
+  .adContainer {
+    min-height: 60px;
+    margin: 15px 0;
+  }
+  
+  .adContainerRectangle {
+    min-height: 200px;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .adContainer {
+    min-height: 50px;
+    margin: 10px 0;
+  }
+  
+  .adContainerRectangle {
+    min-height: 180px;
+    margin: 10px 0;
   }
 } 

@@ -1,6 +1,10 @@
 // Google AdSense Configuration
 // Replace these values with your actual AdSense publisher ID and ad unit IDs
 
+// Check if ads are enabled via environment variable
+// Defaults to false if not specified
+export const IS_ADS_ENABLED = process.env.NEXT_PUBLIC_ENABLE_ADS === 'true';
+
 export const ADSENSE_CONFIG = {
   // Publisher ID
   CLIENT_ID: 'ca-pub-9716996261393919',
@@ -33,4 +37,4 @@ export const ADSENSE_CONFIG = {
   },
 };
 
-export default ADSENSE_CONFIG; 
+export default ADSENSE_CONFIG;

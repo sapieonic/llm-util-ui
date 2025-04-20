@@ -1,63 +1,111 @@
 .header {
-    background: rgba(15, 23, 42, 0.8) !important;
-    backdrop-filter: blur(10px);
-    padding: 0 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.header:hover {
-    background: rgba(15, 23, 42, 0.9) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logoLink {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .title {
-    margin: 0 !important;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.5px;
+  margin: 0 !important;
+  color: #1890ff;
 }
 
 .navLinks {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
 .navLink {
-    color: var(--foreground-muted);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    padding: 8px 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 .navLink:hover {
-    color: var(--foreground);
+  color: #1890ff;
 }
 
-.navLink::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-1);
-    transition: width 0.3s ease;
+.userAvatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.userAvatar:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.userName {
+  margin-left: 8px;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loginButton {
+  margin-left: 8px;
+}
+
+/* Mobile menu button - hidden on desktop */
+.mobileMenuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 16px;
+  }
+  
+  .navLink {
+    font-size: 14px;
+  }
+  
+  .userName {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 16px;
+  }
+  
+  .title {
+    font-size: 18px !important;
+  }
+  
+  /* Hide nav links on mobile */
+  .navLinks {
+    display: none;
+  }
+  
+  /* Show mobile menu button */
+  .mobileMenuButton {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .navLink:hover::after {
