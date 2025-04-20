@@ -45,7 +45,7 @@ const About: React.FC = () => {
                   <div>
                     <Text strong>Email</Text>
                     <Paragraph>
-                      <a href="mailto:me@manasranjan.dev">me@manasranjan.dev</a>
+                      <a href="mailto:dev@llm-util.com">dev@llm-util.com</a>
                     </Paragraph>
                   </div>
                 </div>

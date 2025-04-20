@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LLM Util - AI-Powered Text Utilities
+
+LLM Util is a modern web application that provides a suite of AI-powered text utilities to help improve writing, save time, and enhance productivity. The platform offers tools for text rewriting, summarization, translation, and more, all powered by large language models.
+
+![LLM Util Screenshot](public/logo.jpeg)
+
+## Features
+
+- **Text Rewriting**: Transform and improve your text while maintaining the original meaning
+- **Summarization**: Create concise summaries of longer documents
+- **Translation**: Translate text between multiple languages
+- **User Authentication**: Secure login with Google account
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **User Profiles**: Track usage statistics and history
+- **Modern UI**: Clean, intuitive interface with dark mode
+
+## Technology Stack
+
+- **Frontend**: Next.js, React, TypeScript
+- **Styling**: CSS Modules, Ant Design
+- **Authentication**: Firebase Authentication
+- **Analytics**: (Optional) Google Analytics integration
+- **Monetization**: (Optional) Google AdSense integration
 
 ## Getting Started
 
@@ -15,10 +37,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Firebase Authentication Setup
 
@@ -41,7 +59,7 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
 NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
 
 # Set to 'true' to enable ads, any other value or not set to disable ads
-NEXT_PUBLIC_ENABLE_ADS=true
+NEXT_PUBLIC_ENABLE_ADS=false
 ```
 
 ## User Authentication and Token Tracking
@@ -66,17 +84,26 @@ When ads are disabled:
 
 This feature allows for easy toggling between development/testing environments (ads off) and production environments (ads on).
 
-## Learn More
+## Mobile Responsiveness
 
-To learn more about Next.js, take a look at the following resources:
+LLM Util is designed to work seamlessly across all device sizes:
+- Responsive layout that adapts to screen size
+- Mobile-friendly navigation with collapsible menu
+- Optimized input and output areas for touch interfaces
+- Consistent experience on desktop, tablet, and mobile
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The easiest way to deploy this application is to use the [Vercel Platform](https://vercel.com/new) which offers seamless integration with Next.js projects.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For questions or support, please contact: dev@llm-util.com
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the ISC License - see the package.json file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
