@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/sapieonic/llm-util-ui/compare/v1.4.0...v1.5.0) (2025-04-20)
+
+
+### Bug Fixes
+
+* Minor version tweaks ([0163dd5](https://github.com/sapieonic/llm-util-ui/commit/0163dd5221b5cfe82cf6eb8e64202a4df86f1826))
+
+
+### Features
+
+* Adds login functionality and bunch of other improvements ([3bc9660](https://github.com/sapieonic/llm-util-ui/commit/3bc96609d3d2d59cb392235999421bedad14a959))
+* Minor upgrades ([b8dd7e4](https://github.com/sapieonic/llm-util-ui/commit/b8dd7e41f2c6af5ee9b3cf44b161be36bfe39be7))
+
 # [1.4.0](https://github.com/sapieonic/llm-util-ui/compare/v1.3.0...v1.4.0) (2025-03-15)
 
 
