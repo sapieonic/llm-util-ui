@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/sapieonic/llm-util-ui/compare/v1.5.0...v1.5.1) (2025-04-21)
+
+
+### Bug Fixes
+
+* Adds themeing support ([#6](https://github.com/sapieonic/llm-util-ui/issues/6)) ([f7a73db](https://github.com/sapieonic/llm-util-ui/commit/f7a73dbdaf90a2931a0f4ccf1a3b8ff2f4a5762c))
+
 # [1.5.0](https://github.com/sapieonic/llm-util-ui/compare/v1.4.0...v1.5.0) (2025-04-20)
 
 
