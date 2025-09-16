@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Layout, Typography } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,12 +15,12 @@ export default function Home() {
       <Layout className={styles.layoutWrapper}>
         <Content className={styles.content}>
           <div className={styles.heroSection}>
-            <Image 
-              src="/logo.jpeg" 
-              alt="Logo" 
-              width={180} 
-              height={180} 
-              className={styles.logo} 
+            <Image
+              src="/logo.jpeg"
+              alt="Logo"
+              width={180}
+              height={180}
+              className={styles.logo}
               priority
             />
             <Title level={1} className={styles.mainTitle} data-text="Welcome to LLM Util">Welcome to LLM Util</Title>
@@ -30,17 +31,19 @@ export default function Home() {
               <Button type="primary" size="large" className={styles.ctaButton}>Get Started</Button>
             </Link>
           </div>
+
           <div className={styles.featuresSection}>
             <Title level={2}>Our Services</Title>
             <div className={styles.featureCards}>
               {features.map((feature, index) => (
-                <Link href={feature.link} key={index} passHref>
-                  <FeatureCard
-                    title={feature.title}
-                    description={feature.description}
-                    icon={feature.icon}
-                  />
-                </Link>
+                <FeatureCard
+                  key={index}
+                  title={feature.title}
+                  description={feature.description}
+                  icon={feature.icon}
+                  demoLink={feature.demoLink}
+                  toolLink={feature.link}
+                />
               ))}
             </div>
           </div>

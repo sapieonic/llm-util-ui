@@ -22,7 +22,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           <div className={styles.footerLinks}>
             <Link href="/about" className={styles.footerLink}>About</Link>
             <Link href="/catalogue" className={styles.footerLink}>Services</Link>
-            <a href="https://manasranjan.dev" className={styles.footerLink} target="_blank" rel="noopener noreferrer">Contact</a>
+            <Link href="/contact" className={styles.footerLink}>Contact</Link>
+            <Link href="/privacy" className={styles.footerLink}>Privacy</Link>
+            <Link href="/terms" className={styles.footerLink}>Terms</Link>
           </div>
           <div>
             LLM Util © {new Date().getFullYear()} - AI-powered text utilities

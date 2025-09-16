@@ -10,19 +10,22 @@ export const features = [
     title: 'Text Rewriting',
     description: 'Transform your content with AI-powered rewriting tools.',
     icon: <FileTextOutlined />,
-    link: '/tools/rewrite'
+    link: '/tools/rewrite',
+    demoLink: '/demo/rewrite'
   },
   {
     title: 'Summarization',
     description: 'Condense lengthy texts into concise, informative summaries.',
     icon: <SisternodeOutlined />,
-    link: '/tools/summarize'
+    link: '/tools/summarize',
+    demoLink: '/demo/summarize'
   },
   {
     title: 'Language Translation',
     description: 'Break language barriers with accurate translations.',
     icon: <TranslationOutlined />,
-    link: '/tools/translate'
+    link: '/tools/translate',
+    demoLink: '/demo/translate'
   },
   // Add more features as needed
 ];

@@ -127,6 +127,93 @@
   margin-bottom: 16px;
 }
 
+.authorRole {
+  color: #8b5cf6 !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  color: #3a86ff;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.statsCard {
+  background: rgba(41, 55, 80, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: 30px 0;
+  text-align: center;
+}
+
+.statsCard h3 {
+  color: #ffffff !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 30px !important;
+}
+
+.statItem {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.statNumber {
+  color: #3a86ff !important;
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+  background: linear-gradient(135deg, #3a86ff, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.statItem span {
+  color: #d9e2ef !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.visionCard {
+  background: rgba(41, 55, 80, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+.visionCard h3 {
+  color: #ffffff !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 20px !important;
+}
+
+.featureList {
+  color: #d9e2ef !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.featureList li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.featureList li::marker {
+  color: #3a86ff;
+}
+
 @media (max-width: 768px) {
   .aboutContainer {
     padding: 30px 15px;

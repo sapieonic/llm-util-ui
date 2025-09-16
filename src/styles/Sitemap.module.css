@@ -1,0 +1,332 @@
+.sitemapContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: var(--foreground);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 3rem;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--foreground-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content {
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionCard {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  padding: 30px !important;
+  transition: all 0.3s ease;
+}
+
+.sectionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(58, 134, 255, 0.1);
+  border-color: rgba(58, 134, 255, 0.2) !important;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sectionIcon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-right: 16px;
+  background: rgba(58, 134, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: var(--foreground);
+  margin: 0;
+  font-weight: 600;
+}
+
+.pagesGrid {
+  margin: 0;
+}
+
+.pageLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pageCard {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.pageCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(58, 134, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pageContent {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pageName {
+  font-size: 1.3rem;
+  color: var(--foreground);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.pageDescription {
+  color: var(--foreground-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.pagePath {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: var(--primary);
+}
+
+.pathIcon {
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.footerCard {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  padding: 30px !important;
+}
+
+.footerContent h3 {
+  color: var(--foreground);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.tip {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  color: var(--foreground-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.tip:hover {
+  border-color: rgba(58, 134, 255, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+  transform: translateY(-2px);
+}
+
+.tip strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sitemapContainer {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionCard {
+    padding: 25px !important;
+  }
+
+  .sectionIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .tips {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sitemapContainer {
+    padding: 20px 10px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .sectionCard {
+    padding: 20px !important;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .sectionIcon {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .pageContent {
+    padding: 16px;
+  }
+
+  .pageName {
+    font-size: 1.2rem;
+  }
+
+  .pageDescription {
+    font-size: 0.9rem;
+  }
+
+  .tips {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tip {
+    padding: 16px;
+  }
+
+  .footerCard {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .sectionCard {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .sectionIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .pageContent {
+    padding: 14px;
+  }
+
+  .pageName {
+    font-size: 1.1rem;
+  }
+
+  .pageDescription {
+    font-size: 0.85rem;
+  }
+
+  .pagePath {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .tip {
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+}

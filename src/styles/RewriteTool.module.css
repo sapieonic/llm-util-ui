@@ -4,6 +4,179 @@
     color: var(--foreground);
 }
 
+.guideCollapse {
+    margin-bottom: 24px;
+}
+
+.guideCollapse :global(.ant-collapse-item) {
+    background: rgba(30, 41, 59, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+}
+
+.guideCollapse :global(.ant-collapse-header) {
+    background: transparent !important;
+    border: none !important;
+    color: var(--foreground) !important;
+    padding: 16px 20px !important;
+    border-radius: 12px !important;
+}
+
+.guideCollapse :global(.ant-collapse-header:hover) {
+    background: rgba(58, 134, 255, 0.1) !important;
+}
+
+.guideCollapse :global(.ant-collapse-content) {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 0 12px 12px !important;
+}
+
+.guideCollapse :global(.ant-collapse-content-box) {
+    padding: 0 20px 20px 20px !important;
+}
+
+.guideLabel {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--foreground);
+}
+
+.guideIcon {
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.guideContent {
+    padding-top: 16px;
+}
+
+.guideSection h3 {
+    color: var(--foreground);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.guideGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.guideCard {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.guideCard:hover {
+    transform: translateY(-2px);
+    border-color: rgba(58, 134, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.guideCard h4 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.guideCard p {
+    color: var(--foreground-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.tipsSection {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tipsSection h4 {
+    color: var(--foreground);
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.tipsSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tipsSection li {
+    color: var(--foreground-muted);
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.tipsSection li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.tipsSection strong {
+    color: var(--foreground);
+}
+
+.exampleSection {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.exampleSection h4 {
+    color: var(--foreground);
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.exampleGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.example {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 16px;
+    color: var(--foreground-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.example:hover {
+    border-color: rgba(58, 134, 255, 0.2);
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.example strong {
+    color: var(--primary);
+}
+
 .container h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -176,5 +349,119 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guideCollapse :global(.ant-collapse-header) {
+        padding: 12px 16px !important;
+    }
+
+    .guideCollapse :global(.ant-collapse-content-box) {
+        padding: 0 16px 16px 16px !important;
+    }
+
+    .guideLabel {
+        font-size: 0.9rem;
+    }
+
+    .guideGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .guideCard {
+        padding: 16px;
+    }
+
+    .guideCard h4 {
+        font-size: 1rem;
+    }
+
+    .guideCard p {
+        font-size: 0.85rem;
+    }
+
+    .tipsSection,
+    .exampleSection {
+        padding: 16px;
+    }
+
+    .tipsSection h4,
+    .exampleSection h4 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .exampleGrid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .example {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .buttonGroup button {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .guideSection {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .guideSection h3 {
+        font-size: 1.2rem;
+    }
+
+    .guideCard {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .guideCard h4 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .guideCard p {
+        font-size: 0.8rem;
+    }
+
+    .tipsSection,
+    .exampleSection {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .tipsSection h4,
+    .exampleSection h4 {
+        font-size: 1rem;
+    }
+
+    .tipsSection li {
+        padding: 6px 0;
+        font-size: 0.85rem;
+    }
+
+    .example {
+        padding: 10px;
+        font-size: 0.8rem;
     }
 }

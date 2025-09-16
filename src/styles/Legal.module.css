@@ -1,0 +1,161 @@
+.legalContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: var(--background-light);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.legalContainer h1 {
+  color: var(--foreground);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.legalContainer h2 {
+  color: var(--foreground);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.legalContainer h3 {
+  color: var(--foreground);
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.lastUpdated {
+  text-align: center;
+  color: var(--foreground-muted);
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.section p {
+  color: var(--foreground);
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.list {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.list li {
+  color: var(--foreground);
+  margin-bottom: 10px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.list li strong {
+  color: var(--primary-color);
+}
+
+.contactInfo {
+  background: var(--background);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.contactInfo p {
+  margin-bottom: 0;
+  color: var(--foreground);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: var(--background);
+  border-radius: 8px;
+  color: var(--foreground-muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .legalContainer {
+    padding: 30px 15px;
+  }
+
+  .legalContainer h1 {
+    font-size: 2rem;
+  }
+
+  .legalContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  .legalContainer h3 {
+    font-size: 1.2rem;
+  }
+
+  .section p {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .list {
+    padding-left: 20px;
+  }
+
+  .list li {
+    font-size: 0.95rem;
+  }
+
+  .contactInfo {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legalContainer {
+    padding: 20px 10px;
+    border-radius: 8px;
+  }
+
+  .legalContainer h1 {
+    font-size: 1.75rem;
+  }
+
+  .legalContainer h2 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+  }
+
+  .legalContainer h3 {
+    font-size: 1.1rem;
+  }
+
+  .section p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .list li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+}
