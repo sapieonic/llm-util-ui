@@ -1,0 +1,277 @@
+.demoPageContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 3rem;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--foreground-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.toolGuide {
+  background: var(--background-light);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.toolGuide h2 {
+  color: var(--foreground);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.guideContent {
+  display: grid;
+  gap: 30px;
+}
+
+.guideSection {
+  padding: 25px;
+  background: var(--background);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.guideSection h3 {
+  color: var(--foreground);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.guideSection p {
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.featureList,
+.tipsList {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.featureList li,
+.tipsList li {
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.featureList li:before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.tipsList li:before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+}
+
+.useCases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.useCase {
+  background: var(--background-light);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  color: var(--foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.languageGrid {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.languageCategory {
+  background: var(--background-light);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  color: var(--foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.languageCategory strong {
+  color: var(--primary-color);
+}
+
+.demoTool {
+  margin: 40px 0;
+}
+
+.additionalInfo {
+  margin-top: 50px;
+  padding: 40px;
+  background: var(--background-light);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.additionalInfo h2 {
+  color: var(--foreground);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.benefit {
+  background: var(--background);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit h4 {
+  color: var(--foreground);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  color: var(--foreground-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .demoPageContainer {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .toolGuide {
+    padding: 25px;
+  }
+
+  .toolGuide h2 {
+    font-size: 1.7rem;
+  }
+
+  .guideSection {
+    padding: 20px;
+  }
+
+  .guideSection h3 {
+    font-size: 1.2rem;
+  }
+
+  .useCases {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .additionalInfo {
+    padding: 25px;
+  }
+
+  .additionalInfo h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .demoPageContainer {
+    padding: 20px 10px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .toolGuide {
+    padding: 20px;
+  }
+
+  .toolGuide h2 {
+    font-size: 1.5rem;
+  }
+
+  .guideSection {
+    padding: 15px;
+  }
+
+  .guideSection h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit {
+    padding: 20px;
+  }
+
+  .benefit h4 {
+    font-size: 1.1rem;
+  }
+
+  .additionalInfo {
+    padding: 20px;
+  }
+
+  .additionalInfo h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -6,10 +6,10 @@
     padding: 30px !important;
     transition: all 0.3s ease;
     width: 300px;
-    height: 250px;
+    height: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     position: relative;
@@ -75,45 +75,109 @@
     line-height: 1.6 !important;
 }
 
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.cardActions {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.demoButton {
+    background: rgba(58, 134, 255, 0.1) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+    transition: all 0.3s ease;
+}
+
+.demoButton:hover {
+    background: var(--primary) !important;
+    color: white !important;
+    transform: translateY(-1px);
+}
+
+.toolButton {
+    background: var(--gradient-1) !important;
+    border: none !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.toolButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(58, 134, 255, 0.3);
+}
+
 @media (max-width: 768px) {
     .card {
         width: 100%;
         max-width: 300px;
         height: auto;
-        min-height: 220px;
+        min-height: 320px;
         padding: 25px !important;
     }
-    
+
     .icon {
         width: 70px;
         height: 70px;
         font-size: 2.5rem;
         margin-bottom: 15px;
     }
-    
+
     .card :global(.ant-card-meta-title) {
         font-size: 1.3rem !important;
     }
-    
+
     .card :global(.ant-card-meta-description) {
         font-size: 0.9rem !important;
+    }
+
+    .cardActions {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .demoButton,
+    .toolButton {
+        width: 100%;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .card {
         padding: 20px !important;
-        min-height: 200px;
+        min-height: 300px;
     }
-    
+
     .icon {
         width: 60px;
         height: 60px;
         font-size: 2rem;
         margin-bottom: 12px;
     }
-    
+
     .card :global(.ant-card-meta-title) {
         font-size: 1.2rem !important;
+    }
+
+    .cardActions {
+        margin-top: 12px;
+    }
+
+    .demoButton,
+    .toolButton {
+        font-size: 0.85rem;
+        padding: 4px 8px;
     }
 }

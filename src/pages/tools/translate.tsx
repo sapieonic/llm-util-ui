@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Input, Button, Select, message } from 'antd';
-import { ReloadOutlined } from '@ant-design/icons';
+import { Input, Button, Select, message, Collapse } from 'antd';
+import { ReloadOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import ToolContainer from '../../components/ToolContainer';
 import ProtectedRoute from '../../components/ProtectedRoute';
 import useTool from '../../hooks/useTool';
@@ -99,6 +99,84 @@ const TranslateTool: React.FC = () => {
         onCopy={handleCopy}
         className={styles.container}
       >
+        <Collapse
+          className={styles.guideCollapse}
+          items={[{
+            key: '1',
+            label: (
+              <span className={styles.guideLabel}>
+                <QuestionCircleOutlined className={styles.guideIcon} />
+                How to Use the Text Translator - Tips & Examples
+              </span>
+            ),
+            children: (
+              <div className={styles.guideContent}>
+                <div className={styles.guideGrid}>
+                  <div className={styles.guideCard}>
+                    <h4>🌍 Global Communication</h4>
+                    <p>Break language barriers in international business, travel, and personal communication with accurate translations.</p>
+                  </div>
+                  <div className={styles.guideCard}>
+                    <h4>📚 Learning & Education</h4>
+                    <p>Translate educational content, research papers, and study materials to access knowledge in different languages.</p>
+                  </div>
+                  <div className={styles.guideCard}>
+                    <h4>💼 Business Expansion</h4>
+                    <p>Localize marketing content, product descriptions, and business documents for global markets.</p>
+                  </div>
+                  <div className={styles.guideCard}>
+                    <h4>🎯 Content Localization</h4>
+                    <p>Adapt websites, apps, and digital content for different regions while maintaining cultural relevance.</p>
+                  </div>
+                </div>
+
+                <div className={styles.tipsSection}>
+                  <h4>💡 Tips for Better Translations</h4>
+                  <ul>
+                    <li><strong>Context is Key:</strong> Provide context about the subject matter, audience, and purpose of the translation</li>
+                    <li><strong>Cultural Sensitivity:</strong> Consider cultural nuances and local customs when translating content</li>
+                    <li><strong>Technical Terms:</strong> Specify if you need formal, technical, or casual translation style</li>
+                    <li><strong>Regional Variants:</strong> Mention if you need specific regional variants (e.g., Brazilian Portuguese vs. European Portuguese)</li>
+                    <li><strong>Review & Verify:</strong> Always review translations, especially for important business or legal documents</li>
+                  </ul>
+                </div>
+
+                <div className={styles.languageGuide}>
+                  <h4>🔄 Language Selection Guide</h4>
+                  <div className={styles.languageExamples}>
+                    <div className={styles.languageExample}>
+                      <strong>Auto Detect:</strong> Let the system identify the source language automatically
+                    </div>
+                    <div className={styles.languageExample}>
+                      <strong>Popular Pairs:</strong> English ↔ Spanish, French, German, Chinese, Japanese, Hindi
+                    </div>
+                    <div className={styles.languageExample}>
+                      <strong>Regional Languages:</strong> Odia, Telugu, and other regional languages are supported
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.exampleSection}>
+                  <h4>📋 Example Use Cases</h4>
+                  <div className={styles.exampleGrid}>
+                    <div className={styles.example}>
+                      <strong>Business Emails:</strong> Translate professional correspondence for international clients
+                    </div>
+                    <div className={styles.example}>
+                      <strong>Social Media:</strong> Create multilingual posts for global audience engagement
+                    </div>
+                    <div className={styles.example}>
+                      <strong>Travel Assistance:</strong> Translate signs, menus, and travel documents while abroad
+                    </div>
+                    <div className={styles.example}>
+                      <strong>Academic Research:</strong> Access foreign language research papers and publications
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          }]}
+        />
         <div className={styles.languageSelectors}>
           <div className={styles.languageSelector}>
             <label>From:</label>
@@ -140,7 +218,7 @@ const TranslateTool: React.FC = () => {
           rows={6}
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          placeholder="Enter text to translate..."
+          placeholder="Enter text to translate... (e.g., 'Translate this business email to Spanish: [your content]' or 'Convert this to formal French: [text]')"
           className={styles.textarea}
         />
         

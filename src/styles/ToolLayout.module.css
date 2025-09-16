@@ -8,7 +8,6 @@
 .contentLayout {
     display: flex;
     flex: 1;
-    margin-top: 70px; /* To account for the fixed header */
     background-image: 
         radial-gradient(circle at 10% 20%, rgba(58, 134, 255, 0.1) 0%, transparent 30%),
         radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 30%);
@@ -27,9 +26,8 @@
     border-radius: 0 16px 16px 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: calc(100vh - 70px);
+    height: calc(100vh);
     position: sticky;
-    top: 70px;
     left: 0;
 }
 
